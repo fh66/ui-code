@@ -1,0 +1,96 @@
+@import "common/var";
+@import "cell.less";
+
+[class*=gm-m-]:focus, a:focus, button:focus, input:focus, textarea:focus {
+  outline: 0;
+}
+.gm-m-input__label {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  flex: none;
+  box-sizing: border-box;
+  width: 6.2em;
+  margin-right: @--input-label-margin-right;
+  color: @--input-color;
+  text-align: left;
+  word-wrap: break-word;
+}
+.gm-m-input__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  .gm-m-input__control{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: @--input-color;
+    line-height: inherit;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+    &:disabled {
+      color: @--input-disabled-color;
+      cursor: not-allowed;
+      opacity: 1;
+      -webkit-text-fill-color:@--input-disabled-color;
+    }
+  }
+}
+.gm-m-input__icon {
+  line-height: 24px;
+  font-size:@--input-icon-font-size;
+}
+.gm-m-left_icon {
+  margin-right: 4px;
+}
+.gm-m-right_icon {
+  margin-right: -8px;
+  padding: 0 8px;
+}
+.gm-m-icon-i-guanbi {
+  padding: 0 8px;
+}
+.gm-m-icon-i-guanbi.gm-m-input__icon{
+  right: 0;
+}
+.gm-m-input_error {
+  .gm-m-input__body {
+    .gm-m-input__control {
+      color: @--input-error-message-color;
+      &::placeholder{
+        color: @--input-error-message-color;
+      }
+    }
+  }
+}
+.gm-m-input__error_message{
+  color: @--input-error-message-color;
+  font-size: @--input-error-message-font-size;
+  text-align: left;
+}
+.gm-m-disabled {
+  .gm-m-input__label {
+    color: @--input-disabled-color;
+  }
+}
+.gm-m-input__button {
+  padding-left: 8px;
+}
+.gm-m-input__word-limit {
+  margin-top: 4px;
+  color: #646566;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+}
+.gm-m-input__img {
+  width: 2em;
+  height: 2em;
+}

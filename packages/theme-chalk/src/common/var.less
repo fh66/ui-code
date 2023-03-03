@@ -1,0 +1,159 @@
+/* 全局变量 */
+@c1: #F19017; // 主色，一般用于确认按钮
+@c2: #FF5F3B; // 辅助色
+@c3: #F24961; // 辅助色
+@c4: #2DA3FA; // 辅助色
+@c5: #22C982; // 辅助色
+@c6: #F9F9F9;
+
+/* padding */
+@win-spacing: 12px;// 窗口边距
+@module-my: 12px;// 板块与板块直接间距12
+@list-spacing: 8px;// 列表间距8
+@page-img_1: 112px;// 购物车、订单列表、订单详情、确认订单页面商品图片尺寸56
+@page-img_2: 168px;// 购物车、订单列表、订单详情、确认订单页面商品图片尺寸84
+@lr-spacing-mx: 16px; // 左右间距16
+@list-img-row2-my:11px; // 双行(及三行)图片间距
+@list-item-img-m:24px; // 列表中的图片到列表的上下左右间距 12px;
+
+/* size */
+@goods-list_img-wh: 192px; //所有商品列表页图片尺寸96
+:root {
+  --gm_c1  : @c1;
+  --goods-list_img-wh: @goods-list_img-wh;
+  --gmui-page-img_1:@page-img_1;
+}
+/* radius */
+@--border-radius-medium: 8px;
+@--border-radius-base: 6px;
+@--border-radius-small: 4px;
+/* color */
+@--color-backdrop: #F5F5F5; // 背景色
+@--color-excision: #F0F0F0; // 分割色
+@--color-mask: rgba(0,0,0,0.7); // 蒙层
+@--color-not-entered: #CCCCCC; // 未输入
+@--color-brand: #F19017; // 品牌色
+@--color-error:#FF0A0A;
+@--color-transparent: transparent;
+@--color-white: #FFFFFF;
+@--background-color-info: #F5F5F5;
+@--brand-light-1: mix(@--color-transparent, @--color-brand, 10%); // 品牌色
+@--brand-light-2: mix(@--color-transparent, @--color-brand, 20%); // 品牌色
+@--brand-light-3: mix(@--color-transparent, @--color-brand, 30%); // 品牌色
+@--brand-light-4: mix(@--color-transparent, @--color-brand, 40%); // 品牌色
+@--brand-light-5: mix(@--color-transparent, @--color-brand, 50%); // 品牌色
+@--brand-light-6: mix(@--color-transparent, @--color-brand, 60%); // 品牌色
+@--brand-light-7: mix(@--color-transparent, @--color-brand, 70%); // 品牌色
+@--brand-light-8: mix(@--color-transparent, @--color-brand, 80%); // 品牌色
+@--brand-light-9: mix(@--color-transparent, @--color-brand, 90%); // 品牌色
+@--color-auxiliary-orangered: #FF5F3B; // 辅助色
+@--auxiliary-orangered-light-1: mix(@--color-transparent, @--color-auxiliary-orangered, 20%); // 辅助色
+@--auxiliary-orangered-light-2: mix(@--color-transparent, @--color-auxiliary-orangered, 40%); // 辅助色
+@--auxiliary-orangered-light-3: mix(@--color-transparent, @--color-auxiliary-orangered, 60%); // 辅助色
+@--color-auxiliary-rosered:#F24961; // 辅助色
+@--auxiliary-rosered-light-1: mix(@--color-transparent, @--color-auxiliary-rosered, 20%); // 辅助色
+@--auxiliary-rosered-light-2: mix(@--color-transparent, @--color-auxiliary-rosered, 40%); // 辅助色
+@--auxiliary-rosered-light-3: mix(@--color-transparent, @--color-auxiliary-rosered, 60%); // 辅助色
+@--color-auxiliary-blue: #2DA3FA; // 辅助色
+@--auxiliary-blue-light-1: mix(@--color-transparent, @--color-auxiliary-blue, 20%); // 辅助色
+@--auxiliary-blue-light-2: mix(@--color-transparent, @--color-auxiliary-blue, 40%); // 辅助色
+@--auxiliary-blue-light-3: mix(@--color-transparent, @--color-auxiliary-blue, 60%); // 辅助色
+@--color-auxiliary-green: #22C982; // 辅助色
+@--auxiliary-green-light-1: mix(@--color-transparent, @--color-auxiliary-green, 20%); // 辅助色
+@--auxiliary-green-light-2: mix(@--color-transparent, @--color-auxiliary-green, 40%); // 辅助色
+@--auxiliary-green-light-3: mix(@--color-transparent, @--color-auxiliary-green, 60%); // 辅助色
+@--gradient-brand: linear-gradient(270deg, #F9C333 0%, #F19017 100%); // 品牌色渐变
+@--gradient-orange: linear-gradient(270deg, #FEBA52 0%, #FD9A38 100%); // 首页金刚区渐变
+@--gradient-blue: linear-gradient(90deg, #2DA3FA 0%, #66E0FF 100%); // 首页金刚区渐变色
+@--gradient-purple: linear-gradient(270deg, #CA7DC7 0%, #9966CC 100%); // 首页金刚区渐变色
+/* font */
+@--font-path: 'fonts';
+@--font-display: 'auto';
+/* font-size */
+@--font-size-extra-large: 20px;  // 头部标题 / 一级标题，常见于板块页面头部
+@--font-size-large: 18px; // 卡片列表标题 （双行、多行）/ 用于二级标题 / 按钮（底部吸底大按钮）
+@--font-size-medium: 16px; // 卡片列表标题（单行）用于三级标题 / 表单 / 搜索类 / 备注 / 正文 / 按钮（底部双按钮文字）
+@--font-size-base: 14px; // 正文 / 用于列表中的文字描述，辅助性文字 / 弹窗按钮  / 其他按钮
+@--font-size-small: 12px; // 正文 / 辅助性文字 / 标签
+@--font-size-extra-small: 10px; // 辅助说明文字 / 属于弱化信息，如用于图标释义文字，用户无需太注意的版权信息
+/* font-color */
+@--font-color-hint: #999999; // 提示文字
+@--font-color-text: #666666; // 正文
+@--font-color-small-title: #333333; // 小标题
+@--font-color-large-title: #000000; // 大标题
+/* font-weight */
+@--font-weight-regular: normal;
+@--font-weight-medium: bold;
+/* border */
+@--border-width-base: 1px;
+@--border-style-base: solid;
+@--border-color-base: @--color-transparent;
+@--border-color-info: #999999;
+@--border-base: @--border-width-base @--border-style-base @--border-color-base;
+@--border-info: @--border-width-base @--border-style-base @--border-color-info;
+/* button */
+@--button-default-background-color: @--color-brand;
+@--button-default-font-color:@--color-white;
+@--button-font-weight: @--font-weight-regular;
+@--button-default-border-color: @--color-transparent;
+/* button-large */
+@--button-large-font-size: @--font-size-base;
+@--button-large-border-radius: @--border-radius-medium;
+@--button-large-padding-vertical: 11px;
+@--button-large-padding-horizontal: 20px;
+/* button-default */
+@--button-default-font-size: @--font-size-base;
+@--button-default-border-radius: @--border-radius-base;
+@--button-default-padding-vertical: 8px;
+@--button-default-padding-horizontal: 20px;
+/* button-small */
+@--button-small-font-size: @--font-size-small;
+@--button-small-border-radius: @--border-radius-small;
+@--button-small-padding-vertical: 4px;
+@--button-small-padding-horizontal: 20px;
+/* button-info */
+@--button-info-font-color: @--font-color-small-title;
+@--button-info-background-color: @--background-color-info;
+@--button-info-border-color: @--color-transparent;
+@--button-info-plain-border-color: @--border-color-info;
+@--button-info-plain-font-color: @--font-color-text;
+@--button-info-plain-background-color: @--color-transparent;
+/* button-warning */
+@--button-warning-font-color: @--color-white;
+@--button-warning-background-color: @--color-auxiliary-orangered;
+@--button-warning-border-color: @--color-transparent;
+@--button-warning-plain-border-color: @--color-auxiliary-orangered;
+@--button-warning-plain-font-color: @--color-auxiliary-orangered;
+@--button-warning-plain-background-color: mix(@--color-auxiliary-orangered, @--color-transparent, 10%);
+/* toast */
+@--toast-font-color: @--color-white;
+@--toast-font-size: @--font-size-base;
+@--toast-border-radius: @--border-radius-medium;
+@--toast-padding: 8px 12px;
+/* input */
+@--input-icon-font-size:@--font-size-medium;
+@--input-error-message-font-size:@--font-size-small;
+@--input-color: @--font-color-text;
+@--input-disabled-color: #c8c9cc;
+@--input-label-margin-right: 12px;
+@--input-error-message-color:@--color-error;
+/* END 全局变量 */
+ul,
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+[class*=gm-m-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}

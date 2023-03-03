@@ -1,0 +1,37 @@
+@import "common/var";
+.gm-m-image{
+  position: relative;
+  display: inline-block;
+  .gm-m-image__error-icon .gm-m-icon__image{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
+.gm-m-image__error, .gm-m-image__img, .gm-m-image__loading {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gm-m-image--round {
+  overflow: hidden;
+  border-radius: 50%;
+}
+.gm-m-image__error, .gm-m-image__loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: @--font-color-hint;
+  font-size: 14px;
+  background-color: @--color-backdrop;
+}

@@ -1,0 +1,22 @@
+@import "../common/var";
+.button-size(@padding-vertical, @padding-horizontal, @font-size, @border-radius){
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  border-radius: @border-radius;
+  &.is-round {
+    padding: @padding-vertical @padding-horizontal;
+  }
+};
+.button-variant(@color, @background-color, @border-color, @plain-border-color, @plain-color, @plain-background-color) {
+  color: @color;
+  background-color: @background-color;
+  border-color: @border-color;
+  &.is-plain {
+    .button-plain(@plain-border-color, @plain-color, @plain-background-color)
+  }
+};
+.button-plain (@border-color, @color, @border-background-color) {
+  color: @color;
+  border-color: @border-color;
+  background-color: @border-background-color;
+}

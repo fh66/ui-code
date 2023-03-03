@@ -1,0 +1,158 @@
+@import "common/var";
+
+@font-face {
+  font-family: "gm-m-icon"; /* Project id 2561141 */
+  src: url('@{--font-path}/iconfont.woff2?t=1647397920157') format('woff2'),
+  url('@{--font-path}/iconfont.woff?t=1647397920157') format('woff'),
+  url('@{--font-path}/iconfont.ttf?t=1647397920157') format('truetype'),
+  url('@{--font-path}/iconfont.svg?t=1647397920157#iconfont') format('svg');
+}
+
+[class^="gm-m-icon-"], [class*="gm-m-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gm-m-icon' !important;
+  position: relative;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@classArr: {
+  iocn-xingping1: "\e679";
+  i-xingping2: "\e67a";
+  i-xingping3: "\e67b";
+  i-dingdan-tongzhi: "\e678";
+  chenggong: "\e675";
+  logo_daxiang: "\e677";
+  shibai: "\e676";
+  huodong-fanhuidingbu: "\e673";
+  huodong-gouwuche: "\e674";
+  meishimeike-huiyuanshangcheng: "\e66e";
+  meishimeike-lijidiancan: "\e671";
+  meishimeike-quanbao: "\e672";
+  fenxiang: "\e670";
+  tabbar-wode-sel: "\e66d";
+  i-yuyue: "\e66f";
+  i-baijie: "\e62f";
+  i-canying: "\e630";
+  i-baomu: "\e635";
+  i-chaoshi: "\e636";
+  i-faxian-sel: "\e637";
+  i-gouwuche-sel: "\e638";
+  i-erweima: "\e63d";
+  i-faxian: "\e645";
+  i-gouwuche: "\e64c";
+  i-shouye-sel: "\e64d";
+  i-tingche: "\e650";
+  i-saoyisao: "\e655";
+  i-weixiu: "\e657";
+  i-wode: "\e659";
+  i-shouye: "\e66b";
+  i-waimai: "\e66c";
+  dingzuo01: "\e656";
+  pinglun: "\e653";
+  i-gongxiangmeishi: "\e660";
+  i-ingshou: "\e666";
+  i-meishi: "\e667";
+  yuyue-chewei: "\e668";
+  yuyue-KTV: "\e669";
+  i-waimai: "\e66a";
+  red_gouxuan: "\e665";
+  orange_gouxuan: "\e65f";
+  daojiafuwu: "\e646";
+  waimai: "\e661";
+  dingzuo: "\e662";
+  daodianfuwu: "\e663";
+  tingche: "\e664";
+  pingpaidaolan: "\e65e";
+  dingwei: "\e65c";
+  wenhao: "\e65d";
+  dianpu: "\e65b";
+  gantanhao: "\e65a";
+  zaixianzixun01: "\e658";
+  shouye01: "\e654";
+  lianxishangjia01: "\e652";
+  gouwuche01: "\e64e";
+  fenlei01: "\e64f";
+  caidan01: "\e651";
+  xihuan01: "\e64b";
+  kefu: "\e649";
+  xihuan: "\e64a";
+  quzheli: "\e647";
+  weixinqun: "\e648";
+  paidui: "\e643";
+  tangshi: "\e644";
+  gouwuche-red: "\e641";
+  gouwuche-orange: "\e642";
+  sousuo-guanbi: "\e63f";
+  sousuo: "\e640";
+  yuyue-dingwei: "\e63e";
+  yuyue-shenghuofuwu: "\e63a";
+  yuyue-meishi: "\e63b";
+  yuyue-chewei: "\e63c";
+  yuyue-meifa: "\e639";
+  i-jianhao: "\e622";
+  i-jianhao0: "\e631";
+  i-jiahao: "\e634";
+  i-dingwei: "\e621";
+  i-no_gouxuan: "\e62e";
+  i-zuo: "\e62d";
+  i-xia: "\e61e";
+  i-shang: "\e62b";
+  i-you: "\e62c";
+  i-fanhui: "\e628";
+  i-xiayibu: "\e629";
+  i-xiaoxi: "\e62a";
+  i-che: "\e61f";
+  i-dingwei: "\e60c";
+  i-guanbi: "\e610";
+  i-sousuo: "\e617"
+}
+
+each(@classArr, {
+  .gm-m-icon-@{key}:before {
+    content: @value;
+  }
+;
+});
+.is-dot {
+  position: absolute;
+  width: 8px;
+  min-width: 0;
+  height: 8px;
+  background-color: @--color-error;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+}
+
+.is-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  min-width: 16px;
+  padding: 0 3px;
+  color: @--color-white;
+  font-weight: 500;
+  font-size: @--font-size-small;
+  font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  background-color: @--color-error;
+  border: 1px solid @--color-white;
+  border-radius: 16px;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  -webkit-transform-origin: 100%;
+  transform-origin: 100%;
+}

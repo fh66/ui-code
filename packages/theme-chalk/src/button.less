@@ -1,0 +1,64 @@
+@import "common/var";
+@import "mixins/mixins";
+@import "mixins/_button";
+
+.gm-m-button {
+  display: inline-block;
+  line-height: 1;
+  border: @--border-base;
+  border-color: @--button-default-border-color;
+  white-space: nowrap;
+  cursor: pointer;
+  background: @--button-default-background-color;
+  color: @--button-default-font-color;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: @--button-font-weight;
+  &.is-plain {
+    //&,
+    //&:hover,
+    //&:focus {
+      background-color: mix(@--button-default-background-color, @--color-transparent, 10%);
+      border-color:@--button-default-background-color;
+      color: @--button-default-background-color;
+    //}
+  }
+  &{
+    .button-size(@--button-default-padding-vertical,@--button-default-padding-horizontal,@--button-default-font-size, @--button-default-border-radius)
+  }
+  &--large {
+    .button-size(@--button-large-padding-vertical,@--button-large-padding-horizontal,@--button-large-font-size, @--button-large-border-radius)
+  }
+  &--small {
+    .button-size(@--button-small-padding-vertical,@--button-small-padding-horizontal,@--button-small-font-size, @--button-small-border-radius)
+  }
+  &--info{
+    // 字体颜色、背景颜色、边框颜色、plain边框颜色、plain字体颜色、plain背景颜色
+    .button-variant(@--button-info-font-color,@--button-info-background-color,@--button-info-border-color,@--button-info-plain-border-color,@--button-info-plain-font-color,@--button-info-plain-background-color)
+  }
+  &--warning{
+    // 字体颜色、背景颜色、边框颜色、plain边框颜色、plain字体颜色、plain背景颜色
+    .button-variant(@--button-warning-font-color,@--button-warning-background-color,@--button-warning-border-color,@--button-warning-plain-border-color,@--button-warning-plain-font-color,@--button-warning-plain-background-color)
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &.is-block {
+    display: block;
+    width: 100%;
+  }
+  &.is-hairline {
+    border-width: 0.5px;
+  }
+  &.is-round {
+    border-radius: 999px;
+  }
+  &.is-square {
+    border-radius: 0;
+  }
+}

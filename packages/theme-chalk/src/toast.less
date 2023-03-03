@@ -1,0 +1,91 @@
+@import "common/var";
+
+.gm-m-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,.7);
+  z-index: 999;
+}
+
+.gm-m-forbidClick {
+  background: transparent;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.gm-m-toast {
+  z-index: 9999;
+  position: fixed;
+  left: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 88px;
+  max-width: 70%;
+  padding: @--toast-padding;
+  color: @--toast-font-color;
+  font-size: @--toast-font-size;
+  line-height: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+  word-break: break-all;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: @--toast-border-radius;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  &_icon {
+    font-size: 36px;
+    .gm-m-toast_image {
+      display: block;
+      width: 1em;
+      height: 1em;
+      object-fit: contain;
+    }
+  }
+}
+
+.msg-enter-active {
+  //animation: anim 0.5s;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  opacity: 1;
+}
+
+.msg-leave-active {
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  opacity: 0;
+  //animation: anim 0.5s reverse;
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

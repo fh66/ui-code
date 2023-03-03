@@ -1,0 +1,11 @@
+
+.utils-clearfix(@class) {
+  .@{class}::before,
+  .@{class}::after{
+    display: table;
+    content: "";
+  }
+  .@{class}::after {
+    clear: both;
+  }
+}
