@@ -1,5 +1,5 @@
 # 项目概述
-组件库技术选型上采用基于`Vue2`、`Webpack4.X`、`gulp`进行构建的UI组件库，为APP-C提供组件支持。
+组件库技术选型上采用基于`Vue2`、`Webpack4.X`、`gulp`进行构建的UI组件库。
 
 # 安装依赖
 * 执行依赖安装： npm install
